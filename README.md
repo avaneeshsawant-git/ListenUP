@@ -1,12 +1,5 @@
 # 🎧 ListenUp
 
-![Repo Size](https://img.shields.io/github/repo-size/avaneeshsawant-git/ListenUP)
-![Stars](https://img.shields.io/github/stars/avaneeshsawant-git/ListenUP)
-![Forks](https://img.shields.io/github/forks/avaneeshsawant-git/ListenUP)
-![License](https://img.shields.io/github/license/avaneeshsawant-git/ListenUP)
-
-
-
 ListenUp is a sleek and modern music streaming web app that lets you discover, play, and enjoy your favorite songs effortlessly.
 
 ---
