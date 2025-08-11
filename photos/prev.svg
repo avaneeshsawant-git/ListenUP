@@ -1,0 +1,6 @@
+<svg width="128" height="136" viewBox="0 0 128 136" xmlns="http://www.w3.org/2000/svg">
+  <!-- Triangle -->
+  <polygon points="84,38 84,98 48,68" fill="#0D122B"/>
+  <!-- Vertical bar -->
+  <rect x="34" y="38" width="6" height="60" fill="#0D122B"/>
+</svg>

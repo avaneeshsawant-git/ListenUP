@@ -1,0 +1,115 @@
+.flex {
+    display: flex;
+}
+
+.justifycentre {
+    justify-content: center;
+}
+
+.itemcentre {
+    align-items: center;
+}
+
+.wcolor {
+    
+    color: #FFD700;
+}
+
+.scolor{
+    color: silver;
+}
+
+.artname{
+    font-size: 14px;
+}
+
+.aspace {
+    margin-right: 1rem;
+}
+
+.bspace {
+    margin-right: 2rem;
+}
+
+.midsize {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: grey;
+}
+
+.smallsize {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: rgb(179, 163, 163);
+}
+
+.text:hover {
+    color: white;
+
+}
+
+.pop {
+    font-family: poppins;
+}
+
+.bleed {
+    font-weight: 700;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 10px;
+    border: 2px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+.invious{
+    filter: invert(1);
+}
+
+.cursive{
+    cursor: pointer;
+}
+
+.lc {
+    
+    color: #FFD700;
+    transition: scale 0.2s ease-in;
+}
+
+.llc{
+    transition: scale 0.2s ease-in;
+}
+
+.lc:hover {
+    
+    color: #FFD700;
+    scale: 1.1;
+}
+
+.llc:hover{
+    scale:1.012;
+
+}
+.bigsvg{
+    width: 45px;
+    height: 45px;
+}
+
+.highlight {
+  outline: 2px solid gold;
+  box-shadow: 0 0 10px gold;
+}
