@@ -203,8 +203,30 @@ document.querySelector(".pl").addEventListener("input",() => {
 }
 )
 
+document.querySelector(".hammer").addEventListener("click",() => {
+    document.querySelector(".left").style.left=0
+  
+}
+)
+document.querySelector(".cancel").addEventListener("click",() => {
+    document.querySelector(".left").style.left=`-102%`
+  
+}
+)
 
-
+document.querySelector(".infor").addEventListener("click",() => {
+   let showup=document.querySelector(".showup")
+   if(showup.style.opacity==1){
+    
+    showup.style.opacity=0
+   }
+   else{
+    
+    showup.style.opacity=1
+   }
+  
+}
+)
 
 
 

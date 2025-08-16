@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 
-body{
-    background-color:#0A1A2F;
+body {
+    background-color: #0A1A2F;
 }
-.left{
+
+.left {
     width: 30vw;
     height: 90vh;
     /* border: 2px solid rgb(216, 28, 28); */
@@ -25,9 +26,9 @@ body{
 
 }
 
-.right{
+.right {
     box-sizing: border-box;
-    width:70vw;
+    width: 70vw;
     height: 90vh;
     /* border: 2px solid rgb(163, 19, 19); */
     background-color: #121212;
@@ -38,7 +39,8 @@ body{
     padding: 20px;
     /* overflow-y: scroll; */
 }
-.nav{
+
+.nav {
     /* border: 2px solid rgb(163, 19, 19); */
     width: 98vw;
     height: 50px;
@@ -46,63 +48,66 @@ body{
     justify-content: space-between;
 }
 
-.img{
+.img {
     width: 30px;
 }
 
-.sp{
+.sp {
     margin-right: 1.5rem;
 }
 
-.pic{
+.pic {
     position: relative;
     margin-left: 2.6rem;
 }
 
-.sr{
+.sr {
     visibility: 0;
     position: absolute;
     left: 8.4vw;
 }
 
-.ins{
+.ins {
     height: 35px;
     width: 10%vw;
-    background-color:#222222;
+    background-color: #222222;
     border: 1px solid rgb(73, 67, 67);
     border-radius: 20px;
-    
-}
-input::placeholder {
-  color: rgb(163, 162, 162);
-  font-style:italic;
+
 }
 
-.pl{
+input::placeholder {
+    color: rgb(163, 162, 162);
+    font-style: italic;
+}
+
+.pl {
     box-sizing: border-box;
     padding-left: 40px;
     color: white;
     height: 35px;
     width: 17rem;
-    background-color:#222222;
-    border:1px solid rgb(73, 67, 67);
+    background-color: #222222;
+    border: 1px solid rgb(73, 67, 67);
     border-radius: 20px;
 }
 
-.log{
-    width:6rem;
+
+
+.log {
+    width: 6rem;
     height: 3rem;
     border-radius: 30px;
     font-weight: 900;
 }
 
-.lib{
-    
-    font-family:poppins;
-    
+.lib {
+
+    font-family: poppins;
+
 }
 
-.feet{
+.feet {
     position: absolute;
     flex-wrap: wrap;
     gap: 10px 40px;
@@ -110,125 +115,129 @@ input::placeholder {
     bottom: 1rem;
 }
 
-.legal{
-    color:gray;
+.legal {
+    color: gray;
     font-size: 10px;
     font-family: poppins;
-    
-    
+
+
 }
 
-.scroller{
+.scroller {
     width: 60vw;
     height: 70vh;
     overflow-y: scroll;
 }
 
-.cards{
+.cards {
     margin-top: 1.3rem;
-    
+
     display: flex;
-    
+
     flex-wrap: wrap;
-    gap:15px;
+    gap: 15px;
     /* overflow-y: scroll; */
 }
 
-.card{
+.card {
     position: relative;
-    background-color:#121212;
+    background-color: #121212;
     width: 150px;
     padding: 10px;
-    transition: scale 0.4s ease ;
+    transition: scale 0.4s ease;
 }
-.card p{
+
+.card p {
     font-size: 13px;
     color: rgb(113, 112, 112);
 }
 
-.dhad{
+.dhad {
     width: 100%;
     object-fit: contain;
 }
 
-.play{
+.play {
     position: absolute;
     bottom: 30px;
     right: 15px;
     opacity: 0;
-    transition: transform 0.3s ease ,opacity 0.3s ease ;
-    
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
 }
-.card:hover .play{
-    transform:translateY(-50px);
+
+.card:hover .play {
+    transform: translateY(-50px);
     opacity: 1;
     cursor: pointer;
-    
+
 }
-.card:hover{
+
+.card:hover {
     scale: 1.05;
     background-color: #222222;
 }
 
-.scroll{
+.scroll {
     margin-top: 30px;
     width: 27vw;
     height: 70vh;
     /* background-color: antiquewhite; */
-    overflow-y:auto;
+    overflow-y: auto;
     position: relative;
     overflow-x: hidden;
 }
 
-.slates{
+.slates {
     /* margin-top: 70px; */
     display: flex;
     flex-direction: column;
-    gap:10px;
-    
-    
+    gap: 10px;
+
+
 }
 
-.slate{
+.slate {
     position: relative;
     margin-top: 2rem;
     height: 6.3rem;
     width: 7%vw;
-    background-color:#222222;
+    background-color: #222222;
     overflow: hidden;
     text-overflow: ellipsis;
     z-index: 10;
-    
+
 }
 
-.content{
+.content {
     padding: 10px 20px;
 }
 
-.sar{
+.sar {
     font-size: 13px;
     color: silver;
 
 }
 
-.cross{
+.cross {
     visibility: hidden;
     position: absolute;
 }
-.slate:hover .cross{
-    visibility:visible;
-    position: absolute;
-    
-} 
 
-.playbar{
+.slate:hover .cross {
+    visibility: visible;
+    position: absolute;
+
+}
+
+.playbar {
     padding: 7px;
     margin-top: 1rem;
     box-sizing: border-box;
-    width:60vw;
+    width: 60vw;
     height: 8vh;
-    background-color:#222222;
-    border :2px solid black;
+    background-color: #222222;
+    border: 2px solid black;
     border-radius: 20px;
     position: relative;
 
@@ -236,21 +245,21 @@ input::placeholder {
 
 
 
-.mate{
+.mate {
     position: absolute;
     right: 8px;
     bottom: 14px;
     cursor: pointer;
 }
 
-.fate{
+.fate {
     position: absolute;
     right: 40px;
     bottom: 8px;
     cursor: pointer;
 }
 
-.seekbar{
+.seekbar {
     background-color: aliceblue;
     width: 98%;
     height: 2px;
@@ -258,7 +267,7 @@ input::placeholder {
     bottom: 16px;
 }
 
-.circle{
+.circle {
     height: 13px;
     width: 13px;
     border-radius: 16px;
@@ -269,15 +278,105 @@ input::placeholder {
     transition: left 0.3s;
 }
 
-.above{
+.above {
     padding: 0px 12px;
     /* background-color: aqua; */
     width: 98%;
     justify-content: space-between;
-    
+
 }
 
-.songbuttons{
+.songbuttons {
     position: absolute;
-    left:46%;
+    left: 46%;
+}
+
+.ih {
+    display: none;
+}
+
+.DN {
+    display: block;
+}
+
+.cancel {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    display: none;
+}
+
+.showup {
+    /* box-sizing: border-box; */
+    padding: 9px;
+    width: 80px;
+    height: 50px;
+    background-color: #222222;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    top: 54px;
+    right: -6px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+@media (max-width: 1200px) {
+    .left {
+        background-color: #121212;
+        position: absolute;
+        left: -102%;
+        transition: left 1s;
+        z-index: 10;
+        width: 98vw;
+        height: 95vh;
+    }
+
+    .right {
+        width: 100vw;
+        height: 95vh;
+    }
+
+    .scroll {
+        width: 90vw;
+    }
+
+    .scroller {
+        width: 100vw;
+    }
+
+    .playbar {
+        margin-top: 50px;
+        width: 92vw;
+    }
+
+    .seekbar {
+        width: 95%;
+    }
+
+    .songbuttons {
+        left: 39%;
+    }
+
+    .songtime {
+        font-size: 12px;
+        padding-right: 1rem;
+        padding-top: 0.4rem;
+    }
+
+    .songinfo {
+        font-size: 12px;
+        padding-top: 0.4rem;
+
+    }
+
+    .ih {
+        display: block;
+    }
+
+    .DN {
+        display: none;
+    }
+
+
 }
