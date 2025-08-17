@@ -26,7 +26,7 @@ createcard("photos/square_image_7.png", "Roadkill", "Gvidon")
 createcard("photos/square_image_7.png", "Legacy of Grieg", "White_Records")
 createcard("photos/square_image_12.png", "Powerful Energy", "FASSounds")
 createcard("photos/square_image_8.png", "Energetic Rock", "Dmitry Taras")
-createcard("photos/square_image_8.png", "Energetic Rock", "Dmitry Taras")
+createcard("photos/square_image_8.png", "Stomping Rock", "Dmitry Taras")
 
 function createslate(imag, song, art) {
 
@@ -62,6 +62,7 @@ function createslate(imag, song, art) {
             track = e.target.closest(".slate").querySelector("h3").textContent
             console.log(track)
             playsong(track)
+            active()
 
         }
         )
@@ -73,29 +74,36 @@ function createslate(imag, song, art) {
             if (curentsong.paused) {
                 curentsong.play()
                 pp.src = `photos/paused.svg`
+                active()
             }
             else {
                 curentsong.pause()
                 pp.src = `photos/pause.svg`
+                active()
             }
         }
         )
     });
 
-    let xm=curentsong.src
-    console.log(xm)
-    let sl=document.querySelector(".slate")
-    Array.from(sl).forEach(e=>{
-        let cv=e.querySelector("h3").textContent
-        if(xm.includes(cv)){
-            e.style.backgroundcolor="red"
+    active()
+
+
+    
+}
+function active(){
+    let sl = document.querySelectorAll(".slate")
+    sl.forEach(e => {
+        let xm = decodeURIComponent(curentsong.src)
+        xm = xm.substring(xm.lastIndexOf("/") + 1, xm.lastIndexOf("."));
+        let cv = e.querySelector("h3").textContent.trim()
+        if (xm.includes(cv)) {
+            e.style.backgroundColor = "#0A1A2F"
         }
-        else{
-            e.style.backgroundcolor="#222222;"
+        else {
+            e.style.backgroundColor = "#222222"
         }
     })
 }
-
 
 
 
@@ -123,7 +131,7 @@ for (let e of cds) {
     )
 }
 
-var curentsong = new Audio();
+const curentsong = new Audio();
 
 function playsong(track) {
     curentsong.src = `songs/${track}.mp3`
@@ -131,7 +139,7 @@ function playsong(track) {
     pp.src = `photos/paused.svg`
 
     document.querySelector(".songinfo").innerHTML = track
-    document.querySelector(".songtime").innerHTML = "00:22/02:22"
+    document.querySelector(".songtime").innerHTML = ""
 }
 
 let btn = document.querySelectorAll(".play")
@@ -185,48 +193,49 @@ function formatSecondsToMMSS(seconds) {
 }
 
 
-document.querySelector(".pl").addEventListener("input",() => {
-    const search=document.querySelector(".pl").value.toLowerCase()
+document.querySelector(".pl").addEventListener("input", () => {
+    const search = document.querySelector(".pl").value.toLowerCase()
     let cds = document.getElementsByClassName("card");
-   Array.from(cds).forEach(card => {
-       let title=card.querySelector("h3").textContent.toLowerCase()
-       if (title.includes(search) ||search=='' ){
-        card.style.display='block'
-    }
-        else{
-        card.style.display='none';
-    }
+    Array.from(cds).forEach(card => {
+        let title = card.querySelector("h3").textContent.toLowerCase()
+        if (title.includes(search) || search == '') {
+            card.style.display = 'block'
+        }
+        else {
+            card.style.display = 'none';
+        }
 
-        
+
     });
-  
+
 }
 )
 
-document.querySelector(".hammer").addEventListener("click",() => {
-    document.querySelector(".left").style.left=0
-  
+document.querySelector(".hammer").addEventListener("click", () => {
+    document.querySelector(".left").style.left = 0
+
 }
 )
-document.querySelector(".cancel").addEventListener("click",() => {
-    document.querySelector(".left").style.left=`-102%`
-  
+document.querySelector(".cancel").addEventListener("click", () => {
+    document.querySelector(".left").style.left = `-102%`
+
 }
 )
 
-document.querySelector(".infor").addEventListener("click",() => {
-   let showup=document.querySelector(".showup")
-   if(showup.style.opacity==1){
-    
-    showup.style.opacity=0
-   }
-   else{
-    
-    showup.style.opacity=1
-   }
-  
+document.querySelector(".infor").addEventListener("click", () => {
+    let showup = document.querySelector(".showup")
+    if (showup.style.opacity == 1) {
+
+        showup.style.opacity = 0
+    }
+    else {
+
+        showup.style.opacity = 1
+    }
+
 }
 )
+
 
 
 
