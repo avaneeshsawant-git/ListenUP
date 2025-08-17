@@ -314,7 +314,7 @@ input::placeholder {
     border-radius: 10px;
     position: absolute;
     top: 54px;
-    right: -100%;
+    right: 110%;
     opacity: 1;
     transition: opacity 1s ease, right 0s ease;
 }

@@ -290,7 +290,7 @@ document.querySelector(".infor").addEventListener("click", () => {
     if (showup.style.opacity == 1) {
 
         showup.style.opacity = 0
-        showup.style.right =`-100%`
+        showup.style.right =`110%`
     }
     else {
 
