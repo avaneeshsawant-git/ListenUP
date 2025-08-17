@@ -8,7 +8,9 @@ ListenUp is a sleek and modern music streaming web app that lets you discover, p
 - 🎵 **Stream music** online
 - 🔍 **Search** for songs and artists
 - ❤️ **Create & manage playlists**
-- 📱 **Responsive design** (coming soon)
+- 🔊 **Volume bar** (coming soon)
+- 📱 **Responsive design**
+
 
 ---
 
