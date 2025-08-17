@@ -5,12 +5,11 @@ ListenUp is a sleek and modern music streaming web app that lets you discover, p
 ---
 
 ## 🚀 Features
-- 🎵 **Stream music** online
+- 🎵 **Stream music online**
 - 🔍 **Search** for songs and artists
 - ❤️ **Create & manage playlists**
 - 🔊 **Volume bar** (coming soon)
 - 📱 **Responsive design**
-
 
 ---
 
@@ -21,8 +20,13 @@ ListenUp is a sleek and modern music streaming web app that lets you discover, p
 
 ---
 
+## 🌐 Visit Website
+Check out the live app here: [https://listenup1.netlify.app/](https://listenup1.netlify.app/)
+
+---
+
 ## 📸 Screenshots
-![App Screenshot](photos/screenshot.png) <!-- Replace with your path or URL -->
+![App Screenshot](photos/screenshot.png)
 
 ---
 
