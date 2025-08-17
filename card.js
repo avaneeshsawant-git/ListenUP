@@ -30,10 +30,16 @@ createcard("photos/square_image_8.png", "Stomping Rock", "Dmitry Taras")
 
 function createslate(imag, song, art) {
 
+    let exists = [...document.querySelectorAll(".slate h3")].some(e => e.textContent.trim() === song.trim());
+
+    if (exists) {
+        return;
+    }
+
     let html = `<div class="slate flex llc">
                     <img src="${imag}" alt="">
                     <div class="content">
-                        <h3 class="snm wcolor pop">${song}</h3>
+                        <h3 class="snm wcolor pop lister">${song}</h3>
                         <div class="sar  pop">${art}</div>
                     </div>
                     <img class="img sp cross" src="photos/cross.svg" alt="">
@@ -41,6 +47,8 @@ function createslate(imag, song, art) {
                     <img class=" sp invious fate lc" src="photos/paused.svg" alt="">
                 </div>`
     document.querySelector(".slates").innerHTML = document.querySelector(".slates").innerHTML + html
+
+
 
     let crs = document.querySelectorAll(".cross")
     crs.forEach(cr => {
@@ -50,6 +58,7 @@ function createslate(imag, song, art) {
                 slate.remove()
                 curentsong.pause()
                 curentsong.currentTime = 0
+                updatearray()
             }
 
         }
@@ -62,6 +71,7 @@ function createslate(imag, song, art) {
             track = e.target.closest(".slate").querySelector("h3").textContent
             console.log(track)
             playsong(track)
+            setindex(track)
             active()
 
         }
@@ -85,12 +95,75 @@ function createslate(imag, song, art) {
         )
     });
 
+
+
     active()
+    updatearray()
 
-
-    
 }
-function active(){
+
+let listarray = []
+let index = -1
+
+function updatearray() {
+    let all = [...document.querySelectorAll(".slate h3")]
+        .map(e => e.textContent.trim());
+
+    // remove duplicates
+    listarray = [...new Set(all)];
+    console.log("Updated List:", listarray);
+}
+
+function setindex(track) {
+    index = listarray.indexOf(track)
+}
+
+let btn = document.querySelectorAll(".play")
+btn.forEach(element => {
+    element.addEventListener("click", (e) => {
+        track = e.target.closest(".card").querySelector("h3").textContent
+        console.log(track)
+
+        setindex(track)
+        playsong(track)
+        active()
+
+    }
+    )
+
+});
+
+document.querySelector(".nt").addEventListener("click", () => {
+    let xm = decodeURIComponent(curentsong.src);
+    xm = xm.substring(xm.lastIndexOf("/") + 1, xm.lastIndexOf("."));
+    index = listarray.indexOf(xm);
+
+    if (index !== -1 && index < listarray.length - 1) {
+        nextsong = listarray[index + 1]
+        playsong(nextsong)
+        setindex(nextsong)
+        active()
+    }
+
+}
+)
+
+document.querySelector(".pv").addEventListener("click",() => {
+  let xm = decodeURIComponent(curentsong.src);
+    xm = xm.substring(xm.lastIndexOf("/") + 1, xm.lastIndexOf("."));
+    index = listarray.indexOf(xm);
+
+    if (index !== -1 && index > 0) {
+    prevsong = listarray[index - 1]
+    playsong(prevsong)
+    setindex(prevsong)
+    active()
+}
+}
+)
+
+
+function active() {
     let sl = document.querySelectorAll(".slate")
     sl.forEach(e => {
         let xm = decodeURIComponent(curentsong.src)
@@ -142,17 +215,7 @@ function playsong(track) {
     document.querySelector(".songtime").innerHTML = ""
 }
 
-let btn = document.querySelectorAll(".play")
-btn.forEach(element => {
-    element.addEventListener("click", (e) => {
-        track = e.target.closest(".card").querySelector("h3").textContent
-        console.log(track)
-        playsong(track)
 
-    }
-    )
-
-});
 
 curentsong.addEventListener("timeupdate", () => {
     document.querySelector(".songtime").innerHTML = `${formatSecondsToMMSS(curentsong.currentTime)}/${formatSecondsToMMSS(curentsong.duration)}`
