@@ -337,6 +337,7 @@ input::placeholder {
 
     .scroll {
         width: 90vw;
+        height: 62vh;
     }
 
     .scroller {
