@@ -69,7 +69,7 @@ function createslate(imag, song, art) {
     butn.forEach(element => {
         element.addEventListener("click", (e) => {
             track = e.target.closest(".slate").querySelector("h3").textContent
-            console.log(track)
+            // console.log(track)
             playsong(track)
             setindex(track)
             active()
@@ -110,7 +110,7 @@ function updatearray() {
         .map(e => e.textContent.trim());
 
     listarray = [...new Set(all)];
-    console.log("Updated List:", listarray);
+    // console.log("Updated List:", listarray);
 }
 
 function setindex(track) {
@@ -121,7 +121,7 @@ let btn = document.querySelectorAll(".play")
 btn.forEach(element => {
     element.addEventListener("click", (e) => {
         track = e.target.closest(".card").querySelector("h3").textContent
-        console.log(track)
+        // console.log(track)
 
         setindex(track)
         playsong(track)
@@ -195,9 +195,9 @@ for (let e of cds) {
         const a = e.querySelector("img").src
         const b = e.querySelector("h3").textContent
         const c = e.querySelector("div").textContent
-        console.log(a)
-        console.log(b)
-        console.log(c)
+        // console.log(a)
+        // console.log(b)
+        // console.log(c)
         createslate(a, b, c)
     }
     )
