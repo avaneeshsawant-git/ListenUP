@@ -109,7 +109,6 @@ function updatearray() {
     let all = [...document.querySelectorAll(".slate h3")]
         .map(e => e.textContent.trim());
 
-    // remove duplicates
     listarray = [...new Set(all)];
     console.log("Updated List:", listarray);
 }
